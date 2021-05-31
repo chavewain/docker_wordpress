@@ -30,6 +30,7 @@ services:
           define('MULTISITE', false);
           define('PATH_CURRENT_SITE', '/');
           define('WP_CACHE', true);
+
   db:
     image: mariadb:latest
     container_name: ${DB_NAME}
@@ -43,6 +44,7 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
       - MYSQL_DATABASE=${DB_DB_NAME}
+
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
     container_name: ${PMA_NAME}
